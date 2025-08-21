@@ -1,12 +1,12 @@
-#include "ft_printf.h"
 
+#include "ft_printf.h"
 #include <stdio.h>
 #include <limits.h>
 
-int main(void)
+int	main(void)
 {
-	int output_OG;
-	int output_FT;
+	int	output_OG;
+	int	output_FT;
 
 /////////////////////////////////
 //  	  NO SPECIFIERS		   //

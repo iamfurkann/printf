@@ -54,6 +54,6 @@ int	ft_putnbru(unsigned int c)
 	i = 0;
 	if (c >= 10)
 		i += ft_putnbru(c / 10);
-	i += ft_putchar(c % 10 + '0');
+	i += ft_putchar((c % 10) + '0');
 	return (i);
 }

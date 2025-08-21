@@ -12,17 +12,17 @@
 
 #include "ft_printf.h"
 
-int ft_puthex(unsigned int c, int mod)
+int	ft_puthex(unsigned int c, int mod)
 {
-    char	*hex;
-    int		i;
-	
+	char	*hex;
+	int		i;
+
 	i = 0;
 	if (mod)
 		hex = "0123456789ABCDEF";
 	else
 		hex = "0123456789abcdef";
-	if(c >= 16)
+	if (c >= 16)
 		i += ft_puthex(c / 16, mod);
 	i += ft_putchar(hex[c % 16]);
 	return (i);
@@ -30,16 +30,18 @@ int ft_puthex(unsigned int c, int mod)
 
 static int	ft_putptr_rec(unsigned long n)
 {
-	char	*hex = "0123456789abcdef";
-	int		i = 0;
+	char	*hex;
+	int		i;
 
+	hex = "0123456789abcdef";
+	i = 0;
 	if (n >= 16)
 		i += ft_putptr_rec(n / 16);
 	i += ft_putchar(hex[n % 16]);
 	return (i);
 }
 
-int ft_putptr(void *ptr)
+int	ft_putptr(void *ptr)
 {
 	int	i;
 
@@ -48,4 +50,3 @@ int ft_putptr(void *ptr)
 	i = ft_putstr("0x");
 	return (i + ft_putptr_rec((unsigned long)ptr));
 }
-
