@@ -24,4 +24,5 @@ int	ft_putnbr(int c);
 int	ft_putnbru(unsigned int c);
 int	ft_puthex(unsigned int c, int mod);
 int	ft_putptr(void *ptr);
+
 #endif
